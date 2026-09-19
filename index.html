@@ -57,7 +57,10 @@ const shuffled=[...heroPhotos];
 shuffled.forEach((src,i)=>{
   const d=document.createElement('div');
   d.className='hero-slide'+(i===0?' active':'');
-  d.style.backgroundImage=`url("${src}")`;
+  d.style.setProperty('background-image',`url("${src}")`,'important');
+  d.style.setProperty('background-size','cover','important');
+  d.style.setProperty('background-position','center center','important');
+  d.style.opacity=i===0?'1':'0';
   holder.appendChild(d);
 });
 const slides=[...document.querySelectorAll('.hero-slide')];
@@ -73,6 +76,7 @@ if(slides.length){
     incoming.classList.remove('active');
     incoming.style.opacity='0';
     incoming.classList.add('active');
+    incoming.style.opacity='1';
     startContinuousZoom(incoming,7000,1.12,0,-0.6);
     const hero=document.getElementById('hero');
     hero.classList.remove('hero-flash-live');
@@ -80,8 +84,8 @@ if(slides.length){
     hero.classList.add('hero-flash-live');
     setTimeout(()=>{
       outgoing.classList.remove('active');
+      outgoing.style.opacity='0';
       stopContinuousZoom(outgoing);
-      incoming.style.opacity='';
     },240);
     setTimeout(()=>hero.classList.remove('hero-flash-live'),760);
   },7000);
