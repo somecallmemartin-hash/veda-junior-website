@@ -1311,3 +1311,18 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   .featured-halls .hall-photo{height:220px!important}
   .featured-halls .hall-copy{padding:18px 8px 8px!important}
 }
+
+
+/* ===== Red diagonal NEW ribbons on featured halls ===== */
+.featured-halls .hall-featured{position:relative!important;overflow:hidden!important}
+.hall-corner-new{
+  position:absolute;z-index:12;top:19px;right:-42px;
+  width:160px;padding:8px 0;text-align:center;
+  transform:rotate(45deg);
+  background:linear-gradient(135deg,#ff3348,#c90018);
+  color:#fff;font-size:12px;font-weight:900;letter-spacing:.18em;
+  box-shadow:0 7px 20px rgba(0,0,0,.35),0 0 16px rgba(255,30,55,.25);
+  border-top:1px solid rgba(255,255,255,.38);
+  border-bottom:1px solid rgba(255,255,255,.22);
+  pointer-events:none;
+}
