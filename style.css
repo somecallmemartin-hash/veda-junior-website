@@ -1227,3 +1227,28 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   .hero-left{top:auto!important;bottom:225px!important;transform:none!important}
   .hero-right{top:auto!important;bottom:24px!important;transform:none!important}
 }
+
+
+/* ===== Hero professional rotation ===== */
+.hero-v33 .hero-slide{
+  background-image:none!important;
+  background-position:center center!important;
+  background-size:cover!important;
+  transition:opacity .55s ease!important;
+  transform-origin:center center!important;
+}
+.hero-v33 .hero-slide.active{opacity:1!important}
+.hero-v33 .hero-flash{display:block!important;opacity:0!important;pointer-events:none!important}
+.hero-v33.hero-flash-live .hero-flash{
+  animation:heroFlashVeda .76s ease-out!important;
+}
+@keyframes heroFlashVeda{
+  0%{opacity:0}
+  24%{opacity:.92;background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.95),rgba(235,182,255,.62) 24%,rgba(180,52,255,.22) 52%,transparent 74%)}
+  48%{opacity:.34}
+  100%{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-v33 .hero-slide{transition:opacity .8s ease!important}
+  .hero-v33.hero-flash-live .hero-flash{animation:none!important}
+}
