@@ -1271,3 +1271,43 @@ header{position:relative!important;top:auto!important;z-index:20!important}
 @media(max-width:1180px){.halls-secondary{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:760px){.featured-halls{grid-template-columns:1fr;gap:18px}.featured-halls .hall-photo{height:280px!important}.halls-secondary{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:520px){.halls-secondary{grid-template-columns:1fr!important}.halls-secondary .hall-photo{height:210px!important}}
+
+
+/* ===== Refine featured halls: two compact cards on one row ===== */
+.featured-halls{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:18px!important;
+  max-width:1120px!important;
+  margin:26px auto 22px!important;
+}
+.featured-halls .hall-featured{
+  display:grid!important;
+  grid-template-columns:46% 54%!important;
+  min-height:245px!important;
+  padding:14px!important;
+  border-radius:22px!important;
+}
+.featured-halls .hall-photo{
+  height:100%!important;
+  min-height:215px!important;
+  border-radius:15px!important;
+  overflow:hidden!important;
+}
+.featured-halls .hall-copy{
+  padding:12px 16px 12px 20px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+.featured-halls h3{
+  font-size:clamp(22px,1.65vw,30px)!important;
+  line-height:1.05!important;
+}
+@media(max-width:900px){
+  .featured-halls{grid-template-columns:1fr!important;max-width:620px!important}
+}
+@media(max-width:520px){
+  .featured-halls .hall-featured{grid-template-columns:1fr!important}
+  .featured-halls .hall-photo{height:220px!important}
+  .featured-halls .hall-copy{padding:18px 8px 8px!important}
+}
