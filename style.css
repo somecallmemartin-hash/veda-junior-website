@@ -1545,3 +1545,11 @@ header{position:relative!important;top:auto!important;z-index:20!important}
 #halls .hall-copy .map-btn{
   align-self:center!important;
 }
+
+
+/* ===== Halls eyebrow emphasis ===== */
+#halls > .eyebrow{
+  font-size:clamp(17px,1.65vw,24px)!important;
+  font-weight:900!important;
+  letter-spacing:.14em!important;
+}
