@@ -1382,3 +1382,26 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   .featured-halls{grid-template-columns:1fr!important}
   .featured-halls .hall-photo{height:240px!important}
 }
+
+
+/* ===== Mobile fit: professional section labels ===== */
+@media(max-width:650px){
+  #pro .split-title{
+    font-size:clamp(25px,7.6vw,34px)!important;
+    line-height:1.05!important;
+    letter-spacing:.015em!important;
+    overflow-wrap:anywhere!important;
+    max-width:100%!important;
+  }
+  #pro .gallery-cta{
+    width:100%!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+    text-align:center!important;
+    font-size:12px!important;
+    line-height:1.25!important;
+    padding:13px 12px!important;
+  }
+}
