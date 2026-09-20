@@ -1424,3 +1424,11 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   line-height:1.72;
 }
 .professional-gallery-copy p:last-child{margin-bottom:0}
+
+
+/* ===== Gallery copy replaces old gallery heading ===== */
+.gallery-intro-switch{width:min(1100px,100%);margin:0 auto 24px}
+.gallery-intro-switch>.professional-gallery-copy,
+.gallery-intro-switch>.kids-gallery-copy{display:none!important;margin:0!important}
+.gallery-intro-switch>.active-copy{display:block!important}
+.gallery-tabs{margin-top:0!important}
