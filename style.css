@@ -1784,3 +1784,9 @@ header{position:relative!important;top:auto!important;z-index:20!important}
     min-height:170px;
   }
 }
+
+
+/* ===== Gallery masonry: fill empty grid holes ===== */
+.gallery-v10 .masonry-grid{
+  grid-auto-flow:dense!important;
+}
