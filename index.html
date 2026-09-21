@@ -17,7 +17,6 @@
 </div></section>
 
 <section id="contact" class="contact"><div><span class="eyebrow">ЗАПИСВАНИЯ</span><h2>Искаш да танцуваш с нас?</h2><p>Записването става по телефон.</p><a class="btn" href="tel:+359888769027">0888 769 027</a><a class="btn ghost" href="tel:+359888581430">0888 581 430</a><div class="social-links"><span>Последвайте ни</span><a class="social-link facebook" href="https://www.facebook.com/vedajunior.ballet/photos/?ref=page_internal" target="_blank" rel="noopener" aria-label="Veda Junior във Facebook">Facebook</a><a class="social-link instagram" href="https://www.instagram.com/ballet_veda_junior/" target="_blank" rel="noopener" aria-label="Veda Junior в Instagram">Instagram</a></div></div></section></main><script>
-const heroPhotos=['images_opt/1689234991-2.webp','images_opt/1689235006-9.webp','images_opt/1689235009-11.webp','images_opt/1689235010-12.webp'];
 const kidsPreview=['images_opt/1689244281-14.webp','images_opt/1689244258-4.webp','images_opt/1689246667-5.webp','images_opt/1689244730-3.webp','images_opt/1689244273-10.webp','images_opt/1689242619-14.webp'];
 const proPreview=['images_opt/1689235498-13.webp','images_opt/1689235009-11.webp','images_opt/1689235006-9.webp','images_opt/1689234992-3.webp','images_opt/1680086096-p17-800x513-1.webp','images_opt/1706102463-IMG-55bad09404fae931b6fb5f5c20b775f0-V.webp'];
 
@@ -55,44 +54,19 @@ function flashSwap(box, swap){
   setTimeout(()=>box.classList.remove('shine-flash'),720);
 }
 
-/* HERO — six-second uninterrupted push on every visible image. */
+/* HERO — single static image, no rotation, zoom or flash. */
 const holder=document.querySelector('.hero-slides');
-const shuffled=[...heroPhotos];
-shuffled.forEach((src,i)=>{
+if(holder){
   const d=document.createElement('div');
-  d.className='hero-slide'+(i===0?' active':'');
-  d.style.setProperty('background-image',`url("${src}")`,'important');
+  d.className='hero-slide active hero-static-slide';
+  d.style.setProperty('background-image','url("hero-static.png")','important');
   d.style.setProperty('background-size','cover','important');
   d.style.setProperty('background-position','center center','important');
-  d.style.opacity=i===0?'1':'0';
-  holder.appendChild(d);
-});
-const slides=[...document.querySelectorAll('.hero-slide')];
-let heroIndex=0;
-/* HERO — four selected professional photos, cinematic push + flash transition. */
-if(slides.length){
-  startContinuousZoom(slides[0],7000,1.12,0,-0.6);
-  setInterval(()=>{
-    const outgoing=slides[heroIndex];
-    heroIndex=(heroIndex+1)%slides.length;
-    const incoming=slides[heroIndex];
-    stopContinuousZoom(incoming);
-    incoming.classList.remove('active');
-    incoming.style.opacity='0';
-    incoming.classList.add('active');
-    incoming.style.opacity='1';
-    startContinuousZoom(incoming,7000,1.12,0,-0.6);
-    const hero=document.getElementById('hero');
-    hero.classList.remove('hero-flash-live');
-    void hero.offsetWidth;
-    hero.classList.add('hero-flash-live');
-    setTimeout(()=>{
-      outgoing.classList.remove('active');
-      outgoing.style.opacity='0';
-      stopContinuousZoom(outgoing);
-    },240);
-    setTimeout(()=>hero.classList.remove('hero-flash-live'),760);
-  },7000);
+  d.style.setProperty('opacity','1','important');
+  d.style.setProperty('transform','none','important');
+  d.style.setProperty('animation','none','important');
+  d.style.setProperty('transition','none','important');
+  holder.replaceChildren(d);
 }
 
 function tunePreview(img){
