@@ -1589,3 +1589,16 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   #halls .hall-schedule{font-size:10px!important;padding:6px 7px!important}
   #halls .hall-bottom-row .map-btn{font-size:9px!important;padding:8px 7px!important}
 }
+
+
+/* ===== Mobile hero: show substantially more of the rotating photo ===== */
+@media(max-width:650px) and (orientation:portrait){
+  .hero-v33 .hero-slide{
+    background-size:contain!important;
+    background-repeat:no-repeat!important;
+    background-position:center top!important;
+  }
+  .hero-v33 .hero-slides{
+    background:#09030f!important;
+  }
+}
