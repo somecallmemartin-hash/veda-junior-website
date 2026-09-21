@@ -1725,3 +1725,25 @@ header{position:relative!important;top:auto!important;z-index:20!important}
     background-repeat:no-repeat!important;
   }
 }
+
+
+/* ===== Secondary halls: larger, centered single-line names ===== */
+#halls .halls-secondary .card > h3,
+#halls .halls-secondary .card > h3.hall-title-one-line{
+  width:100%!important;
+  max-width:100%!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+  font-size:clamp(20px,1.7vw,25px)!important;
+  line-height:1.12!important;
+  letter-spacing:-.04em!important;
+}
+@media(max-width:650px) and (orientation:portrait){
+  #halls .halls-secondary .card > h3,
+  #halls .halls-secondary .card > h3.hall-title-one-line{
+    font-size:clamp(18px,5vw,21px)!important;
+    letter-spacing:-.055em!important;
+  }
+}
