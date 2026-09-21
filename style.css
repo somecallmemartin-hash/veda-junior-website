@@ -1790,3 +1790,20 @@ header{position:relative!important;top:auto!important;z-index:20!important}
 .gallery-v10 .masonry-grid{
   grid-auto-flow:dense!important;
 }
+
+
+/* ===== Self-correcting gallery masonry ===== */
+.gallery-v10 .masonry-grid{
+  grid-auto-flow:dense!important;
+  align-items:start!important;
+}
+.gallery-v10 .masonry-tile{
+  min-width:0!important;
+  height:auto!important;
+}
+.gallery-v10 .masonry-tile img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
