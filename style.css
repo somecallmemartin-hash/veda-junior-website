@@ -1714,3 +1714,14 @@ header{position:relative!important;top:auto!important;z-index:20!important}
     font-size:16px!important;
   }
 }
+
+
+/* ===== Dedicated mobile Hero artwork ===== */
+@media(max-width:650px) and (orientation:portrait){
+  .hero-v33 .hero-static-slide{
+    background-image:url('images/hero_vertical.png')!important;
+    background-size:cover!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+  }
+}
