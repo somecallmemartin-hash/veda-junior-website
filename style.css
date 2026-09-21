@@ -1674,3 +1674,43 @@ header{position:relative!important;top:auto!important;z-index:20!important}
     letter-spacing:-.02em!important;
   }
 }
+
+
+/* ===== Unified hall titles + mobile hero full-image framing ===== */
+#halls .halls-secondary .card > h3,
+#halls .hall-title-one-line{
+  width:100%!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+  font-size:clamp(18px,1.45vw,22px)!important;
+  line-height:1.15!important;
+  letter-spacing:-.025em!important;
+}
+#halls .halls-secondary .card > p{
+  width:100%!important;
+  text-align:center!important;
+}
+#halls .hall-subtitle-ics{
+  font-size:17px!important;
+  font-weight:900!important;
+  letter-spacing:.06em!important;
+}
+@media(max-width:650px) and (orientation:portrait){
+  .hero-v33 .hero-slides{
+    background:#09030f!important;
+  }
+  .hero-v33 .hero-static-slide{
+    background-size:contain!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+  }
+  #halls .halls-secondary .card > h3,
+  #halls .hall-title-one-line{
+    font-size:17px!important;
+    line-height:1.1!important;
+    letter-spacing:-.035em!important;
+  }
+  #halls .hall-subtitle-ics{
+    font-size:16px!important;
+  }
+}
