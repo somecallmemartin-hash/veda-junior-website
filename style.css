@@ -1764,3 +1764,23 @@ header{position:relative!important;top:auto!important;z-index:20!important}
     letter-spacing:-.065em!important;
   }
 }
+
+
+/* ===== Hall cards: Google Maps pin previews ===== */
+#halls .hall-photo .hall-map-frame{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:220px;
+  border:0;
+  border-radius:inherit;
+}
+#halls .halls-secondary .hall-photo .hall-map-frame{
+  min-height:180px;
+}
+@media(max-width:650px) and (orientation:portrait){
+  #halls .hall-photo .hall-map-frame,
+  #halls .halls-secondary .hall-photo .hall-map-frame{
+    min-height:170px;
+  }
+}
