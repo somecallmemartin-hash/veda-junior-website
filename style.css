@@ -1606,7 +1606,7 @@ header{position:relative!important;top:auto!important;z-index:20!important}
 
 /* ===== Final static Hero image ===== */
 .hero-v33 .hero-static-slide{
-  background-image:url('hero-static.png')!important;
+  background-image:url('images/hero.png')!important;
   background-size:cover!important;
   background-position:center center!important;
   background-repeat:no-repeat!important;
