@@ -1,4 +1,4 @@
-<!doctype html><html lang="bg"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Veda Junior — Demo v35</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="bg"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Veda Junior — Demo v35</title><link rel="stylesheet" href="style.css?v=hero-mobile-2"></head><body>
 <header><a class="brand" href="index.html"><img src="logo-transparent.png"><span>VEDA JUNIOR</span></a><button class="menu-toggle" type="button" aria-label="Отвори меню" aria-expanded="false"><span></span><span></span><span></span></button><nav><a href="index.html">Начало</a><a href="#about">За нас</a><a href="#halls">Зали</a><a href="#school">Детска школа</a><a href="#pro">Професионален състав</a><a href="gallery.html">Галерия</a><a href="#contact">Контакти</a></nav></header>
 <main><section class="hero hero-v33" id="hero"><div class="hero-slides" aria-hidden="true"></div><div class="shade"></div><div class="hero-flash" aria-hidden="true"></div><div class="hero-announcement hero-left"><h1>НОВА ЗАЛА<br>ДО ПАМЕТНИКА<br>ВАСИЛ ЛЕВСКИ</h1><a class="btn hero-map-btn" href="https://maps.app.goo.gl/vNeuXimurUcWkyaM7" target="_blank" rel="noopener">ВИЖ В GOOGLE MAPS</a></div><div class="hero-announcement hero-right"><h1>НОВА ЗАЛА<br>НА СТАДИОН<br>СЛАВИЯ</h1><a class="btn hero-map-btn" href="https://maps.app.goo.gl/w3BesJTsPMskwZ2A6" target="_blank" rel="noopener">ВИЖ В GOOGLE MAPS</a></div></section>
 <section id="about" class="section"><span class="eyebrow">ЗА НАС</span><h2>Танцуваме заедно от 2001 година.</h2><p class="lead">Veda Junior има дългогодишен сценичен опит, участия в телевизионни продукции, стотици награди от фестивали, работа с редица български и чуждестранни изпълнители и специално изработени сценични костюми.</p></section>
@@ -60,6 +60,7 @@ if(holder){
   const d=document.createElement('div');
   d.className='hero-slide active hero-static-slide';
   d.style.setProperty('background-image','url("images/hero.png")','important');
+  d.dataset.desktopHero='images/hero.png';
   d.style.setProperty('background-size','cover','important');
   d.style.setProperty('background-position','center center','important');
   d.style.setProperty('opacity','1','important');
@@ -67,6 +68,15 @@ if(holder){
   d.style.setProperty('animation','none','important');
   d.style.setProperty('transition','none','important');
   holder.replaceChildren(d);
+  const setHeroArtwork=()=>{
+    const mobile=window.matchMedia('(max-width: 650px) and (orientation: portrait)').matches;
+    const src=mobile?'images/hero_vertical.png?v=2':'images/hero.png';
+    d.style.setProperty('background-image',`url("${src}")`,'important');
+    d.style.setProperty('background-position','center center','important');
+    d.style.setProperty('background-size','cover','important');
+  };
+  setHeroArtwork();
+  window.addEventListener('resize',setHeroArtwork,{passive:true});
 }
 
 function tunePreview(img){
