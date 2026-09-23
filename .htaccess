@@ -2,6 +2,10 @@ RewriteEngine On
 
 # Exact legacy pages go directly to the canonical destination on every host/scheme.
 # Rules precede host normalization to avoid two-hop legacy redirects.
+# Preserve a legacy gallery-image URL only when the same image exists locally.
+# Missing legacy assets remain missing rather than being sent to a generic page.
+RewriteCond %{DOCUMENT_ROOT}/$1 -f
+RewriteRule ^ImagesDB/Participations_[0-9]+/([^/]+\.(?:jpe?g|png|webp))$ https://vedajunior.com/$1 [R=301,L,NE,QSD]
 RewriteRule ^Детска\x20школа/d1/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
 RewriteRule ^dance_school\.php/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
 RewriteRule ^about_junior\.html/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
