@@ -2051,3 +2051,27 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   }
   .hero-v33 .hero-map-btn{min-height:30px!important;padding:6px 9px!important;font-size:8.5px!important}
 }
+
+
+/* ===== Slightly smaller hero hall announcements ===== */
+.hero-v33 .hero-announcement{
+  width:min(34vw,390px)!important;
+  max-width:390px!important;
+  padding:14px 16px!important;
+}
+.hero-v33 .hero-announcement h1,
+.hero-v33 .hero-announcement h2.hero-heading{
+  font-size:clamp(27px,3.45vw,50px)!important;
+  line-height:.92!important;
+  margin:5px 0 8px!important;
+}
+.hero-v33 .hero-map-btn{min-height:32px!important;padding:7px 10px!important;font-size:9px!important}
+@media(max-width:900px){
+  .hero-v33 .hero-announcement{width:min(39vw,345px)!important;max-width:345px!important;padding:11px 13px!important}
+  .hero-v33 .hero-announcement h1,.hero-v33 .hero-announcement h2.hero-heading{font-size:clamp(22px,4.3vw,36px)!important;margin:4px 0 7px!important}
+}
+@media(max-width:600px){
+  .hero-v33 .hero-announcement{width:82%!important;max-width:335px!important;padding:9px 11px!important}
+  .hero-v33 .hero-announcement h1,.hero-v33 .hero-announcement h2.hero-heading{font-size:clamp(16px,5.2vw,22px)!important;margin:0 0 5px!important}
+  .hero-v33 .hero-map-btn{min-height:28px!important;padding:5px 8px!important;font-size:8px!important}
+}
