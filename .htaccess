@@ -1,14 +1,54 @@
 RewriteEngine On
 
-# Serve one public HTTPS URL and preserve the requested path and query string.
+# Exact legacy pages go directly to the canonical destination on every host/scheme.
+# Rules precede host normalization to avoid two-hop legacy redirects.
+RewriteRule ^Детска\x20школа/d1/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^dance_school\.php/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^about_junior\.html/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^about_junior\.php/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^For\-school/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^Children\-dance\-school\-Veda\-Junior/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^za\-shkolata/?$ https://vedajunior.com/detska-shkola.html [R=301,L,NE,QSD]
+RewriteRule ^Професионален\x20Балет/b1/?$ https://vedajunior.com/profesionalen-balet.html [R=301,L,NE,QSD]
+RewriteRule ^professional_ballet\.php/?$ https://vedajunior.com/profesionalen-balet.html [R=301,L,NE,QSD]
+RewriteRule ^about_prof\.html/?$ https://vedajunior.com/profesionalen-balet.html [R=301,L,NE,QSD]
+RewriteRule ^about_prof\.php/?$ https://vedajunior.com/profesionalen-balet.html [R=301,L,NE,QSD]
+RewriteRule ^For\-ballet/?$ https://vedajunior.com/profesionalen-balet.html [R=301,L,NE,QSD]
+RewriteRule ^za\-nas/?$ https://vedajunior.com/profesionalen-balet.html [R=301,L,NE,QSD]
+RewriteRule ^Booking/?$ https://vedajunior.com/detska-shkola.html#contact [R=301,L,NE,QSD]
+RewriteRule ^part_junior\.html/?$ https://vedajunior.com/detska-shkola.html#contact [R=301,L,NE,QSD]
+RewriteRule ^part_junior\.php/?$ https://vedajunior.com/detska-shkola.html#contact [R=301,L,NE,QSD]
+RewriteRule ^part_prof\.html/?$ https://vedajunior.com/profesionalen-balet.html#contact [R=301,L,NE,QSD]
+RewriteRule ^part_prof\.php/?$ https://vedajunior.com/profesionalen-balet.html#contact [R=301,L,NE,QSD]
+RewriteRule ^portfolio\.child\.php/?$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
+RewriteRule ^Галерия\x20Детска\x20школа/h1/?$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
+RewriteRule ^Gallery\-Junior/?$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
+RewriteRule ^gallery_junior\.html/?$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
+RewriteRule ^gallery_junior\.php/?$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
+RewriteRule ^galeria\-detska\-shkola/?$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
+RewriteRule ^portfolio\.php/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^Портфолио/p1/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^Галерия\x20Професионален\x20Балет/p1/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^Gallery/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^gallery_prof\.html/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^gallery_prof\.php/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^galeria\-profesionalen\-balet/?$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^contacts\.php/?$ https://vedajunior.com/#contact [R=301,L,NE,QSD]
+RewriteRule ^contacts\.html/?$ https://vedajunior.com/#contact [R=301,L,NE,QSD]
+RewriteRule ^Contacts/?$ https://vedajunior.com/#contact [R=301,L,NE,QSD]
+RewriteRule ^Контакти/c1/?$ https://vedajunior.com/#contact [R=301,L,NE,QSD]
+RewriteRule ^kontakti/?$ https://vedajunior.com/#contact [R=301,L,NE,QSD]
+RewriteRule ^about\-us\.html/?$ https://vedajunior.com/#about [R=301,L,NE,QSD]
+RewriteRule ^index\.html/?$ https://vedajunior.com/ [R=301,L,NE,QSD]
+RewriteRule ^Sitemap/?$ https://vedajunior.com/sitemap.xml [R=301,L,NE,QSD]
+RewriteRule ^sitemap\.html/?$ https://vedajunior.com/sitemap.xml [R=301,L,NE,QSD]
+RewriteRule ^sitemap\.php/?$ https://vedajunior.com/sitemap.xml [R=301,L,NE,QSD]
+
+# The old homepage is equivalent only when no legacy route query is present.
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^index\.php$ https://vedajunior.com/ [R=301,L]
+
+# Preserve existing HTTPS and non-www normalization for all other requests.
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^vedajunior\.com$ [NC]
 RewriteRule ^ https://vedajunior.com%{REQUEST_URI} [R=301,L]
-
-# Consolidate the duplicate homepage URL.
-RewriteRule ^index\.html$ https://vedajunior.com/ [R=301,L]
-
-# Redirect pages from the previous site to their closest current equivalents.
-RewriteRule ^contacts\.php$ https://vedajunior.com/#contact [R=301,L,NE]
-RewriteRule ^portfolio\.php$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
-RewriteRule ^portfolio\.child\.php$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
