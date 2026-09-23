@@ -2006,3 +2006,48 @@ header{position:relative!important;top:auto!important;z-index:20!important}
     margin:0 0 8px!important;
   }
 }
+
+
+/* ===== Final small hero spacing adjustment ===== */
+.hero-v33 .hero-announcement{
+  width:min(37vw,420px)!important;
+  max-width:420px!important;
+  padding:16px 18px!important;
+}
+.hero-v33 .hero-announcement h1,
+.hero-v33 .hero-announcement h2.hero-heading{
+  font-size:clamp(29px,3.8vw,55px)!important;
+  line-height:.92!important;
+  margin:7px 0 9px!important;
+}
+.hero-v33 .hero-map-btn{
+  min-height:34px!important;
+  padding:8px 12px!important;
+  font-size:10px!important;
+}
+@media(max-width:900px){
+  .hero-v33 .hero-announcement{
+    width:min(41vw,370px)!important;
+    max-width:370px!important;
+    padding:13px 15px!important;
+  }
+  .hero-v33 .hero-announcement h1,
+  .hero-v33 .hero-announcement h2.hero-heading{
+    font-size:clamp(24px,4.7vw,40px)!important;
+    margin:5px 0 8px!important;
+  }
+  .hero-v33 .hero-map-btn{min-height:32px!important;padding:7px 10px!important;font-size:9px!important}
+}
+@media(max-width:600px){
+  .hero-v33 .hero-announcement{
+    width:86%!important;
+    max-width:360px!important;
+    padding:10px 12px!important;
+  }
+  .hero-v33 .hero-announcement h1,
+  .hero-v33 .hero-announcement h2.hero-heading{
+    font-size:clamp(17px,5.7vw,24px)!important;
+    margin:0 0 6px!important;
+  }
+  .hero-v33 .hero-map-btn{min-height:30px!important;padding:6px 9px!important;font-size:8.5px!important}
+}
