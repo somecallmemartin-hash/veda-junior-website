@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Serve one public HTTPS URL and preserve the requested path and query string.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^vedajunior\.com$ [NC]
+RewriteRule ^ https://vedajunior.com%{REQUEST_URI} [R=301,L]
+
+# Redirect pages from the previous site to their closest current equivalents.
+RewriteRule ^contacts\.php$ https://vedajunior.com/#contact [R=301,L,NE]
+RewriteRule ^portfolio\.php$ https://vedajunior.com/gallery.html?tab=professional [R=301,L,NE]
+RewriteRule ^portfolio\.child\.php$ https://vedajunior.com/gallery.html?tab=kids [R=301,L,NE]
