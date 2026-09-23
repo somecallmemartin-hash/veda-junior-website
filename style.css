@@ -1932,3 +1932,33 @@ header{position:relative!important;top:auto!important;z-index:20!important}
 @media(max-width:900px){
   .hero-right .hero-heading{font-size:clamp(52px,8vw,110px)!important;line-height:.85!important;margin:20px 0!important}
 }
+
+
+/* ===== Final hero panel normalization =====
+   Both announcements use one shared visual rule, while semantic H1/H2 stays SEO-correct. */
+.hero-v33 .hero-announcement h1,
+.hero-v33 .hero-announcement h2.hero-heading{
+  font-family:Georgia,serif!important;
+  font-size:clamp(50px,7.4vw,106px)!important;
+  line-height:.90!important;
+  margin:20px 0 16px!important;
+  font-weight:800!important;
+  letter-spacing:-.045em!important;
+  color:#fff!important;
+  text-shadow:0 3px 24px rgba(0,0,0,.85)!important;
+}
+@media(max-width:900px){
+  .hero-v33 .hero-announcement h1,
+  .hero-v33 .hero-announcement h2.hero-heading{
+    font-size:clamp(42px,10.4vw,72px)!important;
+  }
+}
+@media(max-width:600px){
+  .hero-v33 .hero-announcement h1,
+  .hero-v33 .hero-announcement h2.hero-heading{
+    font-size:clamp(21px,7vw,30px)!important;
+    line-height:1.02!important;
+    margin:0 0 10px!important;
+    letter-spacing:-.035em!important;
+  }
+}
