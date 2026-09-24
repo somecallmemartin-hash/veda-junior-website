@@ -2075,3 +2075,10 @@ header{position:relative!important;top:auto!important;z-index:20!important}
   .hero-v33 .hero-announcement h1,.hero-v33 .hero-announcement h2.hero-heading{font-size:clamp(16px,5.2vw,22px)!important;margin:0 0 5px!important}
   .hero-v33 .hero-map-btn{min-height:28px!important;padding:5px 8px!important;font-size:8px!important}
 }
+
+
+/* ===== Mobile section order: keep Детска школа before Професионален състав ===== */
+@media (max-width:900px){
+  .split > #school{order:1!important}
+  .split > #pro{order:2!important}
+}
