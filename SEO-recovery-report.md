@@ -101,3 +101,72 @@
 ### Проверка
 
 Промените са само текстови metadata/съществуващи copy елементи и не добавят нов компонент или визуална секция. Те дават ясни, но не повтарящи се тематични сигнали за „модерен балет“, „модерни танци“, „съвременни танци“ и „танци за деца“ в София.
+---
+
+## Live Technical, Search & Authority Audit — 30 септември 2026
+
+### Scope and safe-change decision
+
+Reviewed the current `main` state after commits `dad86147` (deeper children-school legacy recovery) and `fd06f23e` (deeper professional-ballet legacy recovery), plus the public canonical homepage, sitemap, robots directives, redirect rules, metadata, headings, JSON-LD, internal navigation and public search.
+
+A restore point was created before this audit: `backup/pre-live-tech-audit-2026-09-30` → current `main`.
+
+**Implementation decision:** no visitor-facing HTML, CSS, JavaScript, images, navigation, schema or redirects were changed in this audit. The signals reviewed are correct; adding near-duplicate copy, keyword pages, redirects or unsupported schema would create more risk than SEO value.
+
+### Technical audit
+
+| Check | Result | Action |
+|---|---|---|
+| Canonical URLs | `/`, `/detska-shkola.html`, `/profesionalen-balet.html`, `/gallery.html` are in `sitemap.xml`; each has a self-referencing canonical. | Kept. |
+| Crawl directives | `robots.txt` allows crawling and names the canonical sitemap. | Kept. |
+| Host/protocol and legacy routes | `.htaccess` specifies HTTPS + non-`www`; exact legacy rules run first. The existing report confirms 42 exact routes as 301 → relevant 200. | Kept; do not alter. |
+| Temporary redirects / parameter duplicates | No 302 rule is present. Gallery tabs preserve UX but canonicalize to the single gallery URL. | Kept. |
+| Page structure | All canonical pages have unique title, description, one H1, relevant H2 hierarchy, `lang=bg` and JSON-LD. | Kept. |
+| Internal links and orphan risk | Global navigation and contextual links connect all four sitemap pages; no sitemap page is orphaned. | Kept. |
+| Recent regressions | Source review found no new broken reference or undefined-symbol regression in shared navigation/gallery handling. | Monitor after future gallery changes. |
+| Image performance | Previous hero preload is present. Width/height was not guessed: use measured asset dimensions before adding it. | No speculative change. |
+| Lighthouse/CWV | Requires real browser and field data; source inspection is insufficient. | Check PageSpeed Insights + Search Console first. |
+
+### Current vs historical information
+
+- **Current:** Veda Junior, Sofia, the halls displayed on the site and current phone contact.
+- **Historical:** founding story, festivals, awards, Eurovision, TV, concerts, productions and collaborations. No old address, timetable or price has been restored as current information.
+
+### Primary URL map
+
+| Query family | Primary URL | Intent |
+|---|---|---|
+| Veda Junior; Веда Джуниър; школа по танци София | `/` | Brand and local discovery. |
+| модерен балет София; модерни/съвременни танци София | `/detska-shkola.html` | Children-school service research. |
+| модерен балет за деца; танци за деца София; балет за деца София; детска школа по танци | `/detska-shkola.html` | Enrolment/service detail. |
+| професионален балет Veda Junior; участия; концерти; продукции | `/profesionalen-balet.html` | Professional-history and bookings. |
+| снимки Veda Junior; детска/професионална галерия | `/gallery.html` | Visual proof; tab state is UX only. |
+
+### Public search and competitor findings
+
+Public search already returns the current canonical homepage with the improved title and description. It also returns cached historic `www` and legacy pages. That is expected during canonical consolidation; a browser SERP is not a Search Console position report.
+
+Competitors for broad child-dance queries make age range, locality, style, outcome and enrolment path explicit. The child-school page now covers the evidenced Veda Junior differentiators—history, age groups, modern/contemporary dance, festivals and Sofia halls—without inventing curriculum, schedule or pricing. The highest-value future content is fresh, factual school activity, not repeated keywords.
+
+### Backlink reclamation opportunities
+
+1. Existing listings on Kartasofia, Business.bg and Golden Pages: ask only for correction of official site URL, phone and any verified address.
+2. Public Eurovision history corroborates a Veda Junior guest appearance in Bulgaria 2007; preserve it as historical context only.
+3. Contact past event/media/artist partners only if they have a factual editable page; do not pursue bulk directories or paid links.
+
+### Search Console actions
+
+1. Inspect and request indexing after the 30 September commits for `/`, `/detska-shkola.html`, `/profesionalen-balet.html` and `/gallery.html`.
+2. Compare the latest 28 days with the previous 28 in Performance. Filter queries with meaningful impressions, average position 5–30 and weak CTR; those are the next evidence-based quick wins.
+3. Monitor old `www`/legacy URLs declining while canonical URLs gain impressions.
+4. Run mobile and desktop PageSpeed Insights before changing image/loading strategy.
+
+### Monitoring
+
+- **7 days:** sitemap processing, canonical URL inspection and coverage errors.
+- **14 days:** impressions, newly crawled snippets and legacy consolidation.
+- **28 days:** clicks, CTR and average position by primary URL; compare with previous 28 days before one next targeted improvement.
+
+### Intentionally not changed
+
+Hero, images, galleries, buttons, animation, navigation, mobile/desktop layout, responsive behaviour, verified redirects, canonical host rules, schema facts and link strategy remain unchanged. No keyword pages, keyword stuffing, fake review/award schema or fabricated local data was added.
