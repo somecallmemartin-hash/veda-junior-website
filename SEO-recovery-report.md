@@ -170,3 +170,76 @@ Competitors for broad child-dance queries make age range, locality, style, outco
 ### Intentionally not changed
 
 Hero, images, galleries, buttons, animation, navigation, mobile/desktop layout, responsive behaviour, verified redirects, canonical host rules, schema facts and link strategy remain unchanged. No keyword pages, keyword stuffing, fake review/award schema or fabricated local data was added.
+---
+
+## ADVANCED SEO GROWTH SPRINT — 30 September 2026
+
+### Scope
+
+An evidence-led growth sprint was performed after the completed migration audit. The goal was historical authority recovery, entity understanding, competitor gap analysis, local and backlink opportunities—not additional keyword pages or visual change.
+
+### Research findings — externally corroborated historical facts
+
+| Historical fact | Source | Era | Current page | Already present | Safe to restore | SEO value | Action |
+|---|---|---|---|---|---|---|---|
+| Veda Junior marks 25 years / origin 2001. | BNT and BNR anniversary coverage; legacy page. | 2001–2026 | Детска школа / Homepage | Yes | Yes, as history | High | Retained; no new visible copy needed. |
+| Яна Никова and Оливера Спасова are identified publicly as long-term leaders/choreographers. | BNR 2026; BNT; ArtSofia 2025. | 2001–2026 | Homepage / both topic pages | Yes in copy | Yes | High | Added as Organization founders in schema only. |
+| Major festival distinctions across ages. | 24 Chasa 2015 and 2018; Berkovitsa Municipality 2017. | 2015–2018 | Детска школа | Yes, general historical coverage | Yes | High | Retained as historic achievements; no unsupported total added. |
+| Sofia cultural event participation. | Visit Sofia / Sofia Municipality 2020. | 2020 | Професионален балет | Partly | Yes | Medium | Documented as a backlink/mention opportunity; no claim expansion. |
+| Participation in Bulgarian Evergreens concert. | ArtSofia 2025, Jazz FM. | 2023–2025 | Професионален балет | Partly | Yes | Medium | Future factual update only when a current event is confirmed. |
+| BNT programming / television appearances. | BNT pages 2014, 2021, 2025, 2026. | 2014–2026 | Професионален балет | Yes | Yes | High | Retained in historical context. |
+| Eurovision-related historic participation. | Public legacy material; BNT coverage. | Historic | Професионален балет | Yes | Yes, carefully worded | Medium | Keep as participation, not award/affiliation claim. |
+| Professional work with artists and productions. | Legacy archive plus BNT programme pages. | Historic | Професионален балет | Yes | Yes | High | Retained as historical work. |
+
+### Verified entity improvement
+
+The existing Organization schema already contained founding date, Sofia service area, official Facebook/Instagram profiles and phones. It is now enriched with two verified founders:
+
+- Яна Никова
+- Оливера Спасова
+
+This is a structured-data-only change in `index.html`. No claim was invented, and the visible design/content is unchanged.
+
+### Competitor / intent findings
+
+Public SERP samples for modern ballet, modern dance, ballet for children and dance school in Sofia repeatedly show the same conversion-focused information: current ages/levels, beginner suitability, live schedule, location, instructor proof, enrolment path and fresh posts. Veda Junior has a differentiated advantage: a well-documented history since 2001, multi-hall Sofia presence, professional-stage work and independent media/cultural corroboration.
+
+**Current gap is not a keyword gap.** The only high-value content gap is factual, current enrolment information (e.g. owner-confirmed age/beginner availability and process). It must be supplied and approved as current data before publication. No new page is justified; separate keyword/location pages would add cannibalisation and doorway risk.
+
+### Backlink and mention research
+
+Found **14 high-relevance brand-mention or historical-reference opportunities**, including BNT, BNR, ArtSofia, Visit Sofia, Jazz FM, 24 Chasa, Berkovitsa Municipality, KartaSofia, Business.bg, Golden Pages, Rumyana Kotseva, SODF/Artantsa, official event listings and archival cultural references.
+
+**Six practical reclamation/correction opportunities** were prioritised:
+
+1. KartaSofia — verify/claim listing; set canonical website and only confirmed contact data.
+2. Business.bg — verify/claim listing; set canonical website and phone.
+3. Golden Pages — historic address should be corrected only after the official public correspondence address is confirmed.
+4. ArtSofia and future event organisers — request a canonical link for future factual listings.
+5. BNT/BNR/Jazz FM and partner pages — check whether each mention is unlinked; request a link only where editorially appropriate.
+6. External links to old `www` or legacy routes — update only on high-quality editable pages; redirects remain as safety net.
+
+No outreach was sent and no low-quality directory submission is recommended.
+
+### Documents created
+
+- `SEO-opportunity-map.md` — prioritised evidence, query clustering, SERP watchlist, backlink/PR/local/image/entity opportunities and risks.
+- `SEO-90-day-roadmap.md` — Now / 7 / 14 / 30 / 60 / 90-day plan, Google Business Profile checklist and ethical review flow.
+
+### Search Console status
+
+Search Console performance and URL-inspection data were not accessible in this environment. Therefore no position, CTR, click or trend claim is made. The next data-backed sprint is explicitly defined in the opportunity map: analyse 28 days vs previous 28 days, then select queries with meaningful impressions, position 5–30 and weak CTR.
+
+### Intentionally not changed
+
+- No Hero, layout, responsive/mobile order, CSS, animation, gallery code, images, navigation, buttons, colours or typography.
+- No change to the 42 verified redirects, canonical host rules, sitemap, robots or current hall data.
+- No new landing pages, keyword stuffing, fake review/award/event schema or fabricated business facts.
+
+### Verification
+
+- Backup created: `backup/advanced-seo-growth-2026-09-30`.
+- Entity-schema commit: `d60e751` — GitHub Actions deployment succeeded.
+- Opportunity-map commit: `efcd33d` — GitHub Actions deployment succeeded.
+- 90-day-roadmap commit: `1455cb7` — GitHub Actions deployment succeeded.
+- The entity schema parses as valid JSON before commit. This change has no rendered DOM/layout impact.
