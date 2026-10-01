@@ -326,3 +326,8 @@ Sample legacy inspections `https://www.vedajunior.com/contacts.php` and old `Д�
 3. Prioritize verified enrollment information (current age/level groups, schedules, joining process) in existing sections, subject to owner confirmation.
 4. Monitor whether Search Console progressively consolidates old URL attribution to the four canonical pages; inspect fresh crawls rather than relying on historical performance rows.
 5. Organic Web Search metrics and Maps/Local Pack rankings are separate. No claim of universal first-place position is justified.
+
+
+## Historical content expansion — 1 October 2026
+
+Created three factual pages in the existing topic-page design: `istoria-i-uchastia.html` (dated, linked BNR/BNT/24 Chasa/ArtSofia sources), `zali-sofia.html` (seven current hall maps from the existing site), and `grupi-i-zapisvane.html` (verified phones, current group labels and enrolment guidance, with historical age ranges explicitly labelled as such). Added contextual links from homepage, child school and professional ballet; sitemap now contains seven canonical URLs. Backup branch: `backup/pre-content-expansion-2026-10-01`. No redirect, CSS, JS, gallery, Hero, map destination or primary navigation changes. Source checks found one H1 and self-canonical per page and no missing internal HTML targets. Live deployment and indexing remain separate follow-up checks; no ranking improvement is claimed.
