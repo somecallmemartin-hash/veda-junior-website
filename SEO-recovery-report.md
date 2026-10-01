@@ -294,3 +294,35 @@ The observed Sofia market includes Ballet Tiara (multiple halls and explicit cit
 - VeroniQue names its Sofia dance styles and service geography: https://veronique-bg.com/
 
 **Decision:** Do not add more repetitive Sofia phrases or artificial neighborhood pages. Next material gap is accurate current enrolment facts (age/level, group availability, timetable or clear phone-based process), requiring owner verification. Measure city-wide organic web queries against neighborhood-specific queries in Search Console, with Maps/Local Pack tracked separately.
+
+
+---
+
+## Google Search Console measured baseline — 1 October 2026
+
+**Source:** connected GSC Wizard, property `sc-domain:vedajunior.com`, Google Web Search; last fully settled date **2026-09-28**. The API returns data for **2026-09-22 through 2026-09-28 only** within the requested 2026-09-01–09-28 window; 2026-08-04–08-31 and 2026-09-15–21 returned no rows. Therefore, the current 28-day dashboard is effectively seven days of observed data. Do **not** interpret its comparison delta as organic growth or compare it to a verified historical baseline.
+
+### Baseline metrics (2026-09-22–09-28)
+- 63 Google Web Search clicks; 359 impressions; 17.55% CTR; impression-weighted average position 5.60. Average position aggregates many different searches and must not be presented as a ranking for “модерен балет София”.
+- Clearly branded queries dominate the visible click-bearing query rows: `веда джуниър` 14 clicks / 17 impressions, `veda junior` 10 / 10, `балет веда джуниър` 8 / 9, `балет веда` 3 / 3. Query-level rows are privacy-filtered and do not sum reliably to property totals.
+- Non-brand `модерен балет за деца`: 1 click / 12 impressions / average position 6.42.
+- City-wide query signals are **extremely sparse**: `модерен балет софия` 1 impression / average position 2; `модерен балет за деца софия` 1 / 2; `танци за деца софия` 2 / 4; `балет за деца софия` 1 / 13; `балет деца софия` 1 / 33. These are historical observed averages over tiny samples, **not** stable or universal current rankings.
+- Page rows still attribute clicks and impressions to historic URLs including `https://www.vedajunior.com/` (33 clicks / 168 impressions), `https://www.vedajunior.com/contacts.php` (9 / 86), old `Детска школа/d1` (6 / 93), and `https://vedajunior.com/detska-shkola.html` (3 / 45). Such mixed attribution is consistent with a recent migration and a period containing pre-fix search history; it alone does not demonstrate broken current redirects.
+
+### Indexation: direct URL Inspection API results (checked 2026-10-01)
+All four canonical sitemap URLs returned **PASS / Submitted and indexed / robots allowed / indexing allowed / page fetch successful / mobile crawler**:
+- `https://vedajunior.com/` — last crawled 2026-09-29 21:33:42 UTC.
+- `https://vedajunior.com/detska-shkola.html` — last crawled 2026-09-28 13:35:32 UTC.
+- `https://vedajunior.com/profesionalen-balet.html` — last crawled 2026-09-28 13:35:32 UTC.
+- `https://vedajunior.com/gallery.html` — last crawled 2026-09-28 00:37:34 UTC.
+
+Submitted `https://vedajunior.com/sitemap.xml`: Google downloaded it 2026-09-28, reports **0 errors, 0 warnings, 4 submitted**, but sitemap aggregate displays **0 indexed**. The direct URL Inspection results independently confirm all four are indexed; treat sitemap indexed-count discrepancy as a reporting discrepancy, not proof that all four are excluded.
+
+Sample legacy inspections `https://www.vedajunior.com/contacts.php` and old `Детска школа/d1` still returned **PASS / Submitted and indexed**, but their recorded last crawls were 2026-08-27 and 2026-09-04 respectively, **before** the confirmed September redirect repairs. Recheck after Google recrawls; do not modify the 42 verified 301s solely on this evidence.
+
+### Decisions
+1. Preserve current HTML/CSS/JS/layout/redirects; no further speculative on-page keyword repetition.
+2. Collect a clean post-migration comparison window after sufficient settled data accumulates; distinguish branded, non-branded city-wide, and neighborhood-specific queries.
+3. Prioritize verified enrollment information (current age/level groups, schedules, joining process) in existing sections, subject to owner confirmation.
+4. Monitor whether Search Console progressively consolidates old URL attribution to the four canonical pages; inspect fresh crawls rather than relying on historical performance rows.
+5. Organic Web Search metrics and Maps/Local Pack rankings are separate. No claim of universal first-place position is justified.
