@@ -275,3 +275,22 @@ The observed Sofia market includes Ballet Tiara (multiple halls and explicit cit
 - Use Google Search Console Performance (last 28 vs previous 28 days) for the five broad Sofia query families; segment organic web results by query/page/device. Compare separately with locality-specific queries.
 - Treat Google Maps/Local Pack as a distinct channel: results vary with searcher's location and business profile signals.
 - Avoid adding neighborhood doorway pages, changing the current Google Business Profile automatically, or inflating areaServed with unverified hall addresses.
+
+
+### Completion of the seven-hall city-wide paragraph — 1 October 2026
+
+- The previously blocked `detska-shkola.html` paragraph edit was successfully committed as `c4d6e8bbcad93c3e14ea77683010bae16cdbf73e`.
+- Exact copy now in GitHub `main`: “Veda Junior провежда занимания в 7 зали в различни райони на София, за да могат семействата от целия град да изберат удобна локация. Обадете се за заниманията в избраната зала и отворете картата за точния маршрут.”
+- GitHub commit diff confirms only one paragraph changed, with the same seven Maps URLs and no structural HTML, CSS, JS, image, gallery, canonical or redirect edits.
+- GitHub Actions `Deploy Veda Junior to CBOX` run `36855537408` for `c4d6e8b`: **completed / success** (GitHub API checked). https://github.com/somecallmemartin-hash/veda-junior-website/actions/runs/36855537408
+- The public homepage was readable and showed the previous published city-wide About sentence. A public web extraction of the children's page still served the older paragraph despite the successful deployment; this may be crawler/cache staleness, but **independent live visibility of the new children's paragraph is not yet verified**. Recheck the origin/browser without cached content before marking that check complete.
+- The seven hall Maps links are present unchanged in both the page source and public page extraction; full end-to-end Google Maps destination verification remains separate.
+
+### Current Sofia competitor content signals (public examples, not rankings)
+
+- Ballet Tiara explicitly communicates multiple halls across Sofia and offers locality and group information: https://ballet-tiara.com/
+- Pambos publishes fresh 2026/2027 child/teen class information: https://lospambos.com/novi-grupi/latino-i-moderni-tantsi-za-detsa-i-tiyneydzhari-v-sofiya--pambos-dancing-center
+- Electra makes age-group and class types explicit: https://www.electradancestudio.com/
+- VeroniQue names its Sofia dance styles and service geography: https://veronique-bg.com/
+
+**Decision:** Do not add more repetitive Sofia phrases or artificial neighborhood pages. Next material gap is accurate current enrolment facts (age/level, group availability, timetable or clear phone-based process), requiring owner verification. Measure city-wide organic web queries against neighborhood-specific queries in Search Console, with Maps/Local Pack tracked separately.
