@@ -243,3 +243,35 @@ Search Console performance and URL-inspection data were not accessible in this e
 - Opportunity-map commit: `efcd33d` — GitHub Actions deployment succeeded.
 - 90-day-roadmap commit: `1455cb7` — GitHub Actions deployment succeeded.
 - The entity schema parses as valid JSON before commit. This change has no rendered DOM/layout impact.
+
+---
+
+## City-wide SEO authority — 1 October 2026
+
+**Goal:** Clarify that Veda Junior is one Sofia-wide dance organization operating across seven existing halls, while retaining the local relevance of each hall.
+
+### Existing strengths confirmed from source
+
+- Homepage title and meta description explicitly mention Sofia, modern ballet, modern/contemporary dance, and seven halls.
+- Homepage Organization/LocalBusiness JSON-LD already includes `areaServed: City / София`, a single stable organization `@id`, founding year, verified founders, contact points, and official social profiles.
+- Homepage has a `7 зали в София` heading and seven existing hall/Maps entries.
+- The children's school page has its own canonical, Sofia-focused title/description, a seven-hall section, links to all hall Maps entries, and a contextual homepage halls link.
+- The 42 confirmed legacy redirects already consolidate historic thematic URLs into the correct new pages; no new redirect was justified.
+
+### Public competitor sampling (not rank tracking)
+
+The observed Sofia market includes Ballet Tiara (multiple halls and explicit city-wide coverage), VeroniQue (city/style and schedule), Pambos (fresh groups and enrolment details), and other schools with clear age/level information. These are examples of content presentation, not a universal Google ranking. Maps/Local Pack visibility is location-sensitive and must not be equated with city-wide organic position.
+
+### Minimal implementation
+
+- Backup: `backup/pre-citywide-seo-2026-10-01` from `34e08bad7c246e1dd274c9c7a6940449dc85901d`.
+- Homepage: appended one factual city-wide sentence to the existing About paragraph, connecting the seven halls to different areas of Sofia. Commit `9f9a0501e0381ebc3e2a565af7657dd4aae39564`.
+- No CSS, structural HTML, Hero, media, JS, schema, URL, gallery, navigation, mobile order, or redirects were changed.
+- A matching copy edit on the children's school page was prepared but could not be published through the available write action; its existing seven-hall/Sofia signals remain intact. Do not report it as deployed.
+
+### Measurement and follow-up
+
+- Verify GitHub Actions deployment and live homepage text before claiming live success.
+- Use Google Search Console Performance (last 28 vs previous 28 days) for the five broad Sofia query families; segment organic web results by query/page/device. Compare separately with locality-specific queries.
+- Treat Google Maps/Local Pack as a distinct channel: results vary with searcher's location and business profile signals.
+- Avoid adding neighborhood doorway pages, changing the current Google Business Profile automatically, or inflating areaServed with unverified hall addresses.
