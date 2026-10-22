@@ -1,0 +1,8 @@
+/* Keep image zoom isolated from the long gallery and its animated backdrops. */
+html.photo-viewer-open { overflow:hidden!important; }
+body.photo-viewer-open { position:fixed!important; width:100%; overflow:hidden!important; }
+body.photo-viewer-open::before, body.photo-viewer-open::after { display:none!important; }
+body.photo-viewer-open > header, body.photo-viewer-open > main { visibility:hidden!important; }
+body.photo-viewer-open #lightbox { background:#080808!important; overflow:hidden; touch-action:none; overscroll-behavior:contain; }
+#lightbox #big { transform-origin:center; user-select:none; -webkit-user-select:none; -webkit-user-drag:none; touch-action:none; }
+#lightbox button { z-index:4; touch-action:manipulation; }
